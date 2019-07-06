@@ -126,7 +126,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="wxbase31u.lib wxmsw31u_core.lib wxpng.lib wxzlib.lib wxjpeg.lib wxtiff.lib comctl32.lib Rpcrt4.lib"
+				AdditionalDependencies="wxbase31u.lib wxmsw31u_core.lib wxpng.lib wxzlib.lib comctl32.lib Rpcrt4.lib"
 				AdditionalLibraryDirectories="&quot;D:\wxWidgets\wxWidgets-3.1.2\lib\vc_lib&quot;"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"

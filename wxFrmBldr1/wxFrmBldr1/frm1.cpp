@@ -35,7 +35,7 @@ bool MyApp::OnInit()
 
 MyDialog1::MyDialog1( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxDialog( parent, id, title, pos, size, style )
 {
-	wxInitAllImageHandlers();
+	// wxInitAllImageHandlers();
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 	
 	wxBoxSizer* bSizer1;
@@ -46,10 +46,9 @@ MyDialog1::MyDialog1( wxWindow* parent, wxWindowID id, const wxString& title, co
 	bSizer2 = new wxBoxSizer( wxHORIZONTAL );
 	
 	
+	wxPNGHandler *handler = new wxPNGHandler;
+	wxImage::AddHandler(handler);
 	wxBitmap bmp_side_img = wxBITMAP_PNG_FROM_DATA(side);
-
-
-
 	m_bitmap1 = new wxStaticBitmap( m_panel1, wxID_ANY, bmp_side_img, wxDefaultPosition, wxDefaultSize, 0 );
 	bSizer2->Add( m_bitmap1, 0, wxALL, 5 );
 	
